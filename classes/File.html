@@ -27,7 +27,7 @@
 <h1>LuaDoc</h1>
 <ul>
 	
-	<li><a href="../index.html">Index</a></li>
+	<li><strong>Index</strong></li>
 	
 </ul>
 
@@ -84,8 +84,10 @@
 			<a href="../libraries/coroutine.html">coroutine</a>
 		</li>
 	
-			<li><strong>fastlz</strong></li>
-		
+		<li>
+			<a href="../libraries/fastlz.html">fastlz</a>
+		</li>
+	
 		<li>
 			<a href="../libraries/file.html">file</a>
 		</li>
@@ -184,7 +186,7 @@
 			
 				<li><a href="../classes/Entity.html">Entity</a></li>
 			
-				<li><a href="../classes/File.html">File</a></li>
+				<li><strong>File</strong></li>
 			
 				<li><a href="../classes/Hologram.html">Hologram</a></li>
 			
@@ -511,10 +513,10 @@
 
 <div id="content">
 
-<h1>Library <code>fastlz</code></h1>
+<h1>Type <code>File</code></h1>
 
 <p>
-FastLZ library</p>
+File type</p>
 
 
 
@@ -522,64 +524,161 @@ FastLZ library</p>
 
 
 
-<h2>Functions</h2>
+<h2>Methods</h2>
 <table class="function_list">
 
 	<tr>
-	<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#fastlz_library.compress">compress</a>&nbsp;(s)</td>
-	<td class="summary">
-Compress string using FastLZ </td>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:close">close</a>&nbsp;()</td>
+		<td class="summary">
+Flushes and closes the file.</td>
 	</tr>
 
 	<tr>
-	<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#fastlz_library.decompress">decompress</a>&nbsp;(s)</td>
-	<td class="summary">
-Decompress using FastLZ </td>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:flush">flush</a>&nbsp;()</td>
+		<td class="summary">
+Wait until all changes to the file are complete </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:read">read</a>&nbsp;(n)</td>
+		<td class="summary">
+Reads a certain length of the file's bytes </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:readBool">readBool</a>&nbsp;()</td>
+		<td class="summary">
+Reads a boolean and advances the file position </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:readByte">readByte</a>&nbsp;()</td>
+		<td class="summary">
+Reads a byte and advances the file position </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:readDouble">readDouble</a>&nbsp;()</td>
+		<td class="summary">
+Reads a double and advances the file position </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:readFloat">readFloat</a>&nbsp;()</td>
+		<td class="summary">
+Reads a float and advances the file position </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:readLine">readLine</a>&nbsp;()</td>
+		<td class="summary">
+Reads a line and advances the file position </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:readLong">readLong</a>&nbsp;()</td>
+		<td class="summary">
+Reads a long and advances the file position </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:readShort">readShort</a>&nbsp;()</td>
+		<td class="summary">
+Reads a short and advances the file position </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:seek">seek</a>&nbsp;(n)</td>
+		<td class="summary">
+Sets the file position </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:size">size</a>&nbsp;()</td>
+		<td class="summary">
+Returns the file's size in bytes </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:skip">skip</a>&nbsp;(n)</td>
+		<td class="summary">
+Moves the file position relative to its current position </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:tell">tell</a>&nbsp;()</td>
+		<td class="summary">
+Returns the current file position </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:write">write</a>&nbsp;(str)</td>
+		<td class="summary">
+Writes a string to the file and advances the file position </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:writeBool">writeBool</a>&nbsp;(x)</td>
+		<td class="summary">
+Writes a boolean and advances the file position </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:writeByte">writeByte</a>&nbsp;(x)</td>
+		<td class="summary">
+Writes a byte and advances the file position </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:writeDouble">writeDouble</a>&nbsp;(x)</td>
+		<td class="summary">
+Writes a double and advances the file position </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:writeFloat">writeFloat</a>&nbsp;(x)</td>
+		<td class="summary">
+Writes a float and advances the file position </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:writeLong">writeLong</a>&nbsp;(x)</td>
+		<td class="summary">
+Writes a long and advances the file position </td>
+	</tr>
+
+	<tr>
+		<td class="name" nowrap><span class="realm_cl">&nbsp;</span><a href="#file_methods:writeShort">writeShort</a>&nbsp;(x)</td>
+		<td class="summary">
+Writes a short and advances the file position </td>
 	</tr>
 
 </table>
 
 
 
-
-
-
-
 <br/>
 <br/>
 
 
-
-<h2><a name="functions"></a>Functions</h2>
+<h2><a name="methods"></a>Methods</h2>
 <dl class="function">
 
 
 
 
-<dt><span class="realm_sh">&nbsp;</span><a name="fastlz.compress"></a><strong>fastlz.compress</strong>&nbsp;(s)</dt>
+<dt><span class="realm_cl">&nbsp;</span><a name="File:close"></a><strong>File:close</strong>&nbsp;()</dt>
 <dd>
 
-Compress string using FastLZ
-
-
-
-
-<h3>Parameters:</h3>
-<ul>
-	
-	<li>
-	  <code><em>s</em></code>: String to compress
-	</li>
-	
-</ul>
+Flushes and closes the file. The file must be opened again to use a new file object.
 
 
 
 
 
 
-<h3>Return value:</h3>
-<ul>FastLZ compressed string</ul>
+
+
 
 
 
@@ -591,10 +690,33 @@ Compress string using FastLZ
 
 
 
-<dt><span class="realm_sh">&nbsp;</span><a name="fastlz.decompress"></a><strong>fastlz.decompress</strong>&nbsp;(s)</dt>
+<dt><span class="realm_cl">&nbsp;</span><a name="File:flush"></a><strong>File:flush</strong>&nbsp;()</dt>
 <dd>
 
-Decompress using FastLZ
+Wait until all changes to the file are complete
+
+
+
+
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:read"></a><strong>File:read</strong>&nbsp;(n)</dt>
+<dd>
+
+Reads a certain length of the file's bytes
 
 
 
@@ -603,7 +725,7 @@ Decompress using FastLZ
 <ul>
 	
 	<li>
-	  <code><em>s</em></code>: FastLZ compressed string to decode
+	  <code><em>n</em></code>: The length to read
 	</li>
 	
 </ul>
@@ -614,7 +736,532 @@ Decompress using FastLZ
 
 
 <h3>Return value:</h3>
-<ul>Decompressed string</ul>
+<ul>The data</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:readBool"></a><strong>File:readBool</strong>&nbsp;()</dt>
+<dd>
+
+Reads a boolean and advances the file position
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>The data</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:readByte"></a><strong>File:readByte</strong>&nbsp;()</dt>
+<dd>
+
+Reads a byte and advances the file position
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>The data</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:readDouble"></a><strong>File:readDouble</strong>&nbsp;()</dt>
+<dd>
+
+Reads a double and advances the file position
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>The data</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:readFloat"></a><strong>File:readFloat</strong>&nbsp;()</dt>
+<dd>
+
+Reads a float and advances the file position
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>The data</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:readLine"></a><strong>File:readLine</strong>&nbsp;()</dt>
+<dd>
+
+Reads a line and advances the file position
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>The data</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:readLong"></a><strong>File:readLong</strong>&nbsp;()</dt>
+<dd>
+
+Reads a long and advances the file position
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>The data</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:readShort"></a><strong>File:readShort</strong>&nbsp;()</dt>
+<dd>
+
+Reads a short and advances the file position
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>The data</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:seek"></a><strong>File:seek</strong>&nbsp;(n)</dt>
+<dd>
+
+Sets the file position
+
+
+
+
+<h3>Parameters:</h3>
+<ul>
+	
+	<li>
+	  <code><em>n</em></code>: The position to set it to
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:size"></a><strong>File:size</strong>&nbsp;()</dt>
+<dd>
+
+Returns the file's size in bytes
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>The file's size</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:skip"></a><strong>File:skip</strong>&nbsp;(n)</dt>
+<dd>
+
+Moves the file position relative to its current position
+
+
+
+
+<h3>Parameters:</h3>
+<ul>
+	
+	<li>
+	  <code><em>n</em></code>: How much to move the position
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>The resulting position</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:tell"></a><strong>File:tell</strong>&nbsp;()</dt>
+<dd>
+
+Returns the current file position
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>The current file position</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:write"></a><strong>File:write</strong>&nbsp;(str)</dt>
+<dd>
+
+Writes a string to the file and advances the file position
+
+
+
+
+<h3>Parameters:</h3>
+<ul>
+	
+	<li>
+	  <code><em>str</em></code>: The data to write
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:writeBool"></a><strong>File:writeBool</strong>&nbsp;(x)</dt>
+<dd>
+
+Writes a boolean and advances the file position
+
+
+
+
+<h3>Parameters:</h3>
+<ul>
+	
+	<li>
+	  <code><em>x</em></code>: The boolean to write
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:writeByte"></a><strong>File:writeByte</strong>&nbsp;(x)</dt>
+<dd>
+
+Writes a byte and advances the file position
+
+
+
+
+<h3>Parameters:</h3>
+<ul>
+	
+	<li>
+	  <code><em>x</em></code>: The byte to write
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:writeDouble"></a><strong>File:writeDouble</strong>&nbsp;(x)</dt>
+<dd>
+
+Writes a double and advances the file position
+
+
+
+
+<h3>Parameters:</h3>
+<ul>
+	
+	<li>
+	  <code><em>x</em></code>: The double to write
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:writeFloat"></a><strong>File:writeFloat</strong>&nbsp;(x)</dt>
+<dd>
+
+Writes a float and advances the file position
+
+
+
+
+<h3>Parameters:</h3>
+<ul>
+	
+	<li>
+	  <code><em>x</em></code>: The float to write
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:writeLong"></a><strong>File:writeLong</strong>&nbsp;(x)</dt>
+<dd>
+
+Writes a long and advances the file position
+
+
+
+
+<h3>Parameters:</h3>
+<ul>
+	
+	<li>
+	  <code><em>x</em></code>: The long to write
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_cl">&nbsp;</span><a name="File:writeShort"></a><strong>File:writeShort</strong>&nbsp;(x)</dt>
+<dd>
+
+Writes a short and advances the file position
+
+
+
+
+<h3>Parameters:</h3>
+<ul>
+	
+	<li>
+	  <code><em>x</em></code>: The short to write
+	</li>
+	
+</ul>
+
+
+
+
+
 
 
 
@@ -624,9 +1271,6 @@ Decompress using FastLZ
 
 
 </dl>
-
-
-
 
 
 

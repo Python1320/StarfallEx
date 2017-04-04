@@ -194,7 +194,7 @@
 			
 				<li><a href="../classes/Npc.html">Npc</a></li>
 			
-				<li><a href="../classes/PhysObj.html">PhysObj</a></li>
+				<li><strong>PhysObj</strong></li>
 			
 				<li><a href="../classes/Player.html">Player</a></li>
 			
@@ -204,7 +204,7 @@
 			
 				<li><a href="../classes/VMatrix.html">VMatrix</a></li>
 			
-				<li><strong>Vector</strong></li>
+				<li><a href="../classes/Vector.html">Vector</a></li>
 			
 				<li><a href="../classes/Vehicle.html">Vehicle</a></li>
 			
@@ -513,10 +513,10 @@
 
 <div id="content">
 
-<h1>Type <code>Vector</code></h1>
+<h1>Type <code>PhysObj</code></h1>
 
 <p>
-Vector type</p>
+PhysObj Type</p>
 
 
 
@@ -528,177 +528,147 @@ Vector type</p>
 <table class="function_list">
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:add">add</a>&nbsp;(v)</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:applyForceCenter">applyForceCenter</a>&nbsp;(force)</td>
 		<td class="summary">
-Add vector - Modifies self.</td>
+Applys a force to the center of the physics object </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:cross">cross</a>&nbsp;(v)</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:applyForceOffset">applyForceOffset</a>&nbsp;(force, position)</td>
 		<td class="summary">
-Calculates the cross product of the 2 vectors, creates a unique perpendicular vector to both input vectors.</td>
+Applys an offset force to a physics object </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:div">div</a>&nbsp;(n)</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:applyTorque">applyTorque</a>&nbsp;(torque)</td>
 		<td class="summary">
-"Scalar Division" of the vector.</td>
+Applys a torque to a physics object </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:dot">dot</a>&nbsp;(v)</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:getAngleVelocity">getAngleVelocity</a>&nbsp;()</td>
 		<td class="summary">
-Dot product is the cosine of the angle between both vectors multiplied by their lengths.</td>
+Gets the angular velocity of the physics object </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:getAngle">getAngle</a>&nbsp;()</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:getAngles">getAngles</a>&nbsp;()</td>
 		<td class="summary">
-Get the vector's angle.</td>
+Gets the angles of the physics object </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:getAngleEx">getAngleEx</a>&nbsp;(v)</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:getEntity">getEntity</a>&nbsp;()</td>
 		<td class="summary">
-Returns the Angle between two vectors.</td>
+Gets the entity attached to the physics object </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:getDistance">getDistance</a>&nbsp;(v)</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:getInertia">getInertia</a>&nbsp;()</td>
 		<td class="summary">
-Returns the pythagorean distance between the vector and the other vector.</td>
+Gets the inertia of the physics object </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:getDistanceSqr">getDistanceSqr</a>&nbsp;(v)</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:getMass">getMass</a>&nbsp;()</td>
 		<td class="summary">
-Returns the squared distance of 2 vectors, this is faster Vector:getDistance as calculating the square root is an expensive process.</td>
+Gets the mass of the physics object </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:getLength">getLength</a>&nbsp;()</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:getMassCenter">getMassCenter</a>&nbsp;()</td>
 		<td class="summary">
-Get the vector's Length.</td>
+Gets the center of mass of the physics object in the local reference frame.</td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:getLength2D">getLength2D</a>&nbsp;()</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:getMaterial">getMaterial</a>&nbsp;()</td>
 		<td class="summary">
-Returns the length of the vector in two dimensions, without the Z axis.</td>
+Gets the material of the physics object </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:getLength2DSqr">getLength2DSqr</a>&nbsp;()</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:getMesh">getMesh</a>&nbsp;()</td>
 		<td class="summary">
-Returns the length squared of the vector in two dimensions, without the Z axis.</td>
+Returns a table of MeshVertex structures where each 3 vertices represent a triangle.</td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:getLengthSqr">getLengthSqr</a>&nbsp;()</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:getMeshConvexes">getMeshConvexes</a>&nbsp;()</td>
 		<td class="summary">
-Get the vector's length squared ( Saves computation by skipping the square root ).</td>
+Returns a structured table, the physics mesh of the physics object.</td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:getNormalized">getNormalized</a>&nbsp;()</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:getPos">getPos</a>&nbsp;()</td>
 		<td class="summary">
-Returns a new vector with the same direction by length of 1.</td>
+Gets the position of the physics object </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:isEqualTol">isEqualTol</a>&nbsp;(v, t)</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:getVelocity">getVelocity</a>&nbsp;()</td>
 		<td class="summary">
-Is this vector and v equal within tolerance t.</td>
+Gets the velocity of the physics object </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:isZero">isZero</a>&nbsp;()</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:isValid">isValid</a>&nbsp;()</td>
 		<td class="summary">
-Are all fields zero.</td>
+Checks if the physics object is valid </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:mul">mul</a>&nbsp;(n)</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:localToWorldVector">localToWorldVector</a>&nbsp;(vec)</td>
 		<td class="summary">
-Scalar Multiplication of the vector.</td>
+Returns a normal vector in the reference frame of the world from the local frame of the physicsobject </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:normalize">normalize</a>&nbsp;()</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:setInertia">setInertia</a>&nbsp;(inertia)</td>
 		<td class="summary">
-Normalise the vector, same direction, length 1.</td>
+Sets the inertia of a physics object </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:rotate">rotate</a>&nbsp;(b)</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:setMass">setMass</a>&nbsp;(mass)</td>
 		<td class="summary">
-Rotate the vector by Angle b.</td>
+Sets the mass of a physics object </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:rotateAroundAxis">rotateAroundAxis</a>&nbsp;(axis, degrees, radians)</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:setMaterial">setMaterial</a>&nbsp;(material)</td>
 		<td class="summary">
-Return rotated vector by an axis </td>
+Sets the physical material of a physics object </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:set">set</a>&nbsp;(v)</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:setPos">setPos</a>&nbsp;(pos)</td>
 		<td class="summary">
-Copies the values from the second vector to the first vector.</td>
+Sets the position of the physics object </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:setX">setX</a>&nbsp;(x)</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:setVelocity">setVelocity</a>&nbsp;(vel)</td>
 		<td class="summary">
-Set's the vector's x coordinate and returns it.</td>
+Sets the velocity of the physics object </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:setY">setY</a>&nbsp;(y)</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:worldToLocal">worldToLocal</a>&nbsp;(vec)</td>
 		<td class="summary">
-Set's the vector's y coordinate and returns it.</td>
+Returns a vector in the reference frame of the world from the local frame of the physicsobject </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:setZ">setZ</a>&nbsp;(z)</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:worldToLocal">worldToLocal</a>&nbsp;(vec)</td>
 		<td class="summary">
-Set's the vector's z coordinate and returns it.</td>
+Returns a vector in the reference frame of the world from the local frame of the physicsobject </td>
 	</tr>
 
 	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:setZero">setZero</a>&nbsp;()</td>
+		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#physobj_methods:worldToLocalVector">worldToLocalVector</a>&nbsp;(vec)</td>
 		<td class="summary">
-Set's all vector fields to 0.</td>
-	</tr>
-
-	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:sub">sub</a>&nbsp;(v)</td>
-		<td class="summary">
-Subtract v from this Vector.</td>
-	</tr>
-
-	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:toScreen">toScreen</a>&nbsp;()</td>
-		<td class="summary">
-Translates the vectors position into 2D user screen coordinates.</td>
-	</tr>
-
-	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:vdiv">vdiv</a>&nbsp;(v)</td>
-		<td class="summary">
-Divide self by a Vector.</td>
-	</tr>
-
-	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:vmul">vmul</a>&nbsp;(v)</td>
-		<td class="summary">
-Multiply self with a Vector.</td>
-	</tr>
-
-	<tr>
-		<td class="name" nowrap><span class="realm_sh">&nbsp;</span><a href="#vec_methods:withinAABox">withinAABox</a>&nbsp;(v1, v2)</td>
-		<td class="summary">
-Returns whenever the given vector is in a box created by the 2 other vectors.</td>
+Returns a normal vector in the local reference frame of the physicsobject from the world frame </td>
 	</tr>
 
 </table>
@@ -715,10 +685,10 @@ Returns whenever the given vector is in a box created by the 2 other vectors.</t
 
 
 
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:add"></a><strong>Vector:add</strong>&nbsp;(v)</dt>
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:applyForceCenter"></a><strong>PhysObj:applyForceCenter</strong>&nbsp;(force)</dt>
 <dd>
 
-Add vector - Modifies self.
+Applys a force to the center of the physics object
 
 
 
@@ -727,839 +697,7 @@ Add vector - Modifies self.
 <ul>
 	
 	<li>
-	  <code><em>v</em></code>: Vector to add
-	</li>
-	
-</ul>
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>nil</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:cross"></a><strong>Vector:cross</strong>&nbsp;(v)</dt>
-<dd>
-
-Calculates the cross product of the 2 vectors, creates a unique perpendicular vector to both input vectors.
-
-
-
-
-<h3>Parameters:</h3>
-<ul>
-	
-	<li>
-	  <code><em>v</em></code>: Second Vector
-	</li>
-	
-</ul>
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>Vector</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:div"></a><strong>Vector:div</strong>&nbsp;(n)</dt>
-<dd>
-
-"Scalar Division" of the vector. Self-Modifies.
-
-
-
-
-<h3>Parameters:</h3>
-<ul>
-	
-	<li>
-	  <code><em>n</em></code>: Scalar to divide by.
-	</li>
-	
-</ul>
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>nil</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:dot"></a><strong>Vector:dot</strong>&nbsp;(v)</dt>
-<dd>
-
-Dot product is the cosine of the angle between both vectors multiplied by their lengths. A.B = ||A||||B||cosA.
-
-
-
-
-<h3>Parameters:</h3>
-<ul>
-	
-	<li>
-	  <code><em>v</em></code>: Second Vector
-	</li>
-	
-</ul>
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>Number</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:getAngle"></a><strong>Vector:getAngle</strong>&nbsp;()</dt>
-<dd>
-
-Get the vector's angle.
-
-
-
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>Angle</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:getAngleEx"></a><strong>Vector:getAngleEx</strong>&nbsp;(v)</dt>
-<dd>
-
-Returns the Angle between two vectors.
-
-
-
-
-<h3>Parameters:</h3>
-<ul>
-	
-	<li>
-	  <code><em>v</em></code>: Second Vector
-	</li>
-	
-</ul>
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>Angle</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:getDistance"></a><strong>Vector:getDistance</strong>&nbsp;(v)</dt>
-<dd>
-
-Returns the pythagorean distance between the vector and the other vector.
-
-
-
-
-<h3>Parameters:</h3>
-<ul>
-	
-	<li>
-	  <code><em>v</em></code>: Second Vector
-	</li>
-	
-</ul>
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>Number</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:getDistanceSqr"></a><strong>Vector:getDistanceSqr</strong>&nbsp;(v)</dt>
-<dd>
-
-Returns the squared distance of 2 vectors, this is faster Vector:getDistance as calculating the square root is an expensive process.
-
-
-
-
-<h3>Parameters:</h3>
-<ul>
-	
-	<li>
-	  <code><em>v</em></code>: Second Vector
-	</li>
-	
-</ul>
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>Number</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:getLength"></a><strong>Vector:getLength</strong>&nbsp;()</dt>
-<dd>
-
-Get the vector's Length.
-
-
-
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>number Length.</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:getLength2D"></a><strong>Vector:getLength2D</strong>&nbsp;()</dt>
-<dd>
-
-Returns the length of the vector in two dimensions, without the Z axis.
-
-
-
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>number length</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:getLength2DSqr"></a><strong>Vector:getLength2DSqr</strong>&nbsp;()</dt>
-<dd>
-
-Returns the length squared of the vector in two dimensions, without the Z axis. ( Saves computation by skipping the square root )
-
-
-
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>number length squared.</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:getLengthSqr"></a><strong>Vector:getLengthSqr</strong>&nbsp;()</dt>
-<dd>
-
-Get the vector's length squared ( Saves computation by skipping the square root ).
-
-
-
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>number length squared.</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:getNormalized"></a><strong>Vector:getNormalized</strong>&nbsp;()</dt>
-<dd>
-
-Returns a new vector with the same direction by length of 1.
-
-
-
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>Vector Normalised</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:isEqualTol"></a><strong>Vector:isEqualTol</strong>&nbsp;(v, t)</dt>
-<dd>
-
-Is this vector and v equal within tolerance t.
-
-
-
-
-<h3>Parameters:</h3>
-<ul>
-	
-	<li>
-	  <code><em>v</em></code>: Second Vector
-	</li>
-	
-	<li>
-	  <code><em>t</em></code>: Tolerance number.
-	</li>
-	
-</ul>
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>bool True/False.</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:isZero"></a><strong>Vector:isZero</strong>&nbsp;()</dt>
-<dd>
-
-Are all fields zero.
-
-
-
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>bool True/False</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:mul"></a><strong>Vector:mul</strong>&nbsp;(n)</dt>
-<dd>
-
-Scalar Multiplication of the vector. Self-Modifies.
-
-
-
-
-<h3>Parameters:</h3>
-<ul>
-	
-	<li>
-	  <code><em>n</em></code>: Scalar to multiply with.
-	</li>
-	
-</ul>
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>nil</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:normalize"></a><strong>Vector:normalize</strong>&nbsp;()</dt>
-<dd>
-
-Normalise the vector, same direction, length 1. Self-Modifies.
-
-
-
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>nil</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:rotate"></a><strong>Vector:rotate</strong>&nbsp;(b)</dt>
-<dd>
-
-Rotate the vector by Angle b. Self-Modifies.
-
-
-
-
-<h3>Parameters:</h3>
-<ul>
-	
-	<li>
-	  <code><em>b</em></code>: Angle to rotate by.
-	</li>
-	
-</ul>
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>nil.</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:rotateAroundAxis"></a><strong>Vector:rotateAroundAxis</strong>&nbsp;(axis, degrees, radians)</dt>
-<dd>
-
-Return rotated vector by an axis
-
-
-
-
-<h3>Parameters:</h3>
-<ul>
-	
-	<li>
-	  <code><em>axis</em></code>: Axis the rotate around
-	</li>
-	
-	<li>
-	  <code><em>degrees</em></code>: Angle to rotate by in degrees or nil if radians.
-	</li>
-	
-	<li>
-	  <code><em>radians</em></code>: Angle to rotate by in radians or nil if degrees.
-	</li>
-	
-</ul>
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>Rotated vector</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:set"></a><strong>Vector:set</strong>&nbsp;(v)</dt>
-<dd>
-
-Copies the values from the second vector to the first vector. Self-Modifies.
-
-
-
-
-<h3>Parameters:</h3>
-<ul>
-	
-	<li>
-	  <code><em>v</em></code>: Second Vector
-	</li>
-	
-</ul>
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>nil</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:setX"></a><strong>Vector:setX</strong>&nbsp;(x)</dt>
-<dd>
-
-Set's the vector's x coordinate and returns it.
-
-
-
-
-<h3>Parameters:</h3>
-<ul>
-	
-	<li>
-	  <code><em>x</em></code>: The x coordinate
-	</li>
-	
-</ul>
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>The modified vector</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:setY"></a><strong>Vector:setY</strong>&nbsp;(y)</dt>
-<dd>
-
-Set's the vector's y coordinate and returns it.
-
-
-
-
-<h3>Parameters:</h3>
-<ul>
-	
-	<li>
-	  <code><em>y</em></code>: The y coordinate
-	</li>
-	
-</ul>
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>The modified vector</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:setZ"></a><strong>Vector:setZ</strong>&nbsp;(z)</dt>
-<dd>
-
-Set's the vector's z coordinate and returns it.
-
-
-
-
-<h3>Parameters:</h3>
-<ul>
-	
-	<li>
-	  <code><em>z</em></code>: The z coordinate
-	</li>
-	
-</ul>
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>The modified vector</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:setZero"></a><strong>Vector:setZero</strong>&nbsp;()</dt>
-<dd>
-
-Set's all vector fields to 0.
-
-
-
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>nil</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:sub"></a><strong>Vector:sub</strong>&nbsp;(v)</dt>
-<dd>
-
-Subtract v from this Vector. Self-Modifies.
-
-
-
-
-<h3>Parameters:</h3>
-<ul>
-	
-	<li>
-	  <code><em>v</em></code>: Second Vector.
-	</li>
-	
-</ul>
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>nil</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:toScreen"></a><strong>Vector:toScreen</strong>&nbsp;()</dt>
-<dd>
-
-Translates the vectors position into 2D user screen coordinates.
-
-
-
-
-
-
-
-
-
-<h3>Return value:</h3>
-<ul>A table {x=screenx,y=screeny,visible=visible}</ul>
-
-
-
-
-
-</dd>
-
-
-
-
-
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:vdiv"></a><strong>Vector:vdiv</strong>&nbsp;(v)</dt>
-<dd>
-
-Divide self by a Vector. Self-Modifies. ( convenience function )
-
-
-
-
-<h3>Parameters:</h3>
-<ul>
-	
-	<li>
-	  <code><em>v</em></code>: Vector to divide by
+	  <code><em>force</em></code>: The force vector to apply
 	</li>
 	
 </ul>
@@ -1579,10 +717,10 @@ Divide self by a Vector. Self-Modifies. ( convenience function )
 
 
 
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:vmul"></a><strong>Vector:vmul</strong>&nbsp;(v)</dt>
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:applyForceOffset"></a><strong>PhysObj:applyForceOffset</strong>&nbsp;(force, position)</dt>
 <dd>
 
-Multiply self with a Vector. Self-Modifies. ( convenience function )
+Applys an offset force to a physics object
 
 
 
@@ -1591,7 +729,11 @@ Multiply self with a Vector. Self-Modifies. ( convenience function )
 <ul>
 	
 	<li>
-	  <code><em>v</em></code>: Vector to multiply with
+	  <code><em>force</em></code>: The force vector to apply
+	</li>
+	
+	<li>
+	  <code><em>position</em></code>: The position in world coordinates
 	</li>
 	
 </ul>
@@ -1611,10 +753,10 @@ Multiply self with a Vector. Self-Modifies. ( convenience function )
 
 
 
-<dt><span class="realm_sh">&nbsp;</span><a name="Vector:withinAABox"></a><strong>Vector:withinAABox</strong>&nbsp;(v1, v2)</dt>
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:applyTorque"></a><strong>PhysObj:applyTorque</strong>&nbsp;(torque)</dt>
 <dd>
 
-Returns whenever the given vector is in a box created by the 2 other vectors.
+Applys a torque to a physics object
 
 
 
@@ -1623,11 +765,351 @@ Returns whenever the given vector is in a box created by the 2 other vectors.
 <ul>
 	
 	<li>
-	  <code><em>v1</em></code>: Vector used to define AABox
+	  <code><em>torque</em></code>: The local torque vector to apply
 	</li>
 	
+</ul>
+
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:getAngleVelocity"></a><strong>PhysObj:getAngleVelocity</strong>&nbsp;()</dt>
+<dd>
+
+Gets the angular velocity of the physics object
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>Vector angular velocity of the physics object</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:getAngles"></a><strong>PhysObj:getAngles</strong>&nbsp;()</dt>
+<dd>
+
+Gets the angles of the physics object
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>Angle angles of the physics object</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:getEntity"></a><strong>PhysObj:getEntity</strong>&nbsp;()</dt>
+<dd>
+
+Gets the entity attached to the physics object
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>The entity attached to the physics object</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:getInertia"></a><strong>PhysObj:getInertia</strong>&nbsp;()</dt>
+<dd>
+
+Gets the inertia of the physics object
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>Vector Inertia of the physics object</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:getMass"></a><strong>PhysObj:getMass</strong>&nbsp;()</dt>
+<dd>
+
+Gets the mass of the physics object
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>mass of the physics object</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:getMassCenter"></a><strong>PhysObj:getMassCenter</strong>&nbsp;()</dt>
+<dd>
+
+Gets the center of mass of the physics object in the local reference frame.
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>Center of mass vector in the physobject's local reference frame.</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:getMaterial"></a><strong>PhysObj:getMaterial</strong>&nbsp;()</dt>
+<dd>
+
+Gets the material of the physics object
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>The physics material of the physics object</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:getMesh"></a><strong>PhysObj:getMesh</strong>&nbsp;()</dt>
+<dd>
+
+Returns a table of MeshVertex structures where each 3 vertices represent a triangle. See: http://wiki.garrysmod.com/page/Structures/MeshVertex
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>table of MeshVertex structures</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:getMeshConvexes"></a><strong>PhysObj:getMeshConvexes</strong>&nbsp;()</dt>
+<dd>
+
+Returns a structured table, the physics mesh of the physics object. See: http://wiki.garrysmod.com/page/Structures/MeshVertex
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>table of MeshVertex structures</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:getPos"></a><strong>PhysObj:getPos</strong>&nbsp;()</dt>
+<dd>
+
+Gets the position of the physics object
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>Vector position of the physics object</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:getVelocity"></a><strong>PhysObj:getVelocity</strong>&nbsp;()</dt>
+<dd>
+
+Gets the velocity of the physics object
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>Vector velocity of the physics object</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:isValid"></a><strong>PhysObj:isValid</strong>&nbsp;()</dt>
+<dd>
+
+Checks if the physics object is valid
+
+
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>boolean if the physics object is valid</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:localToWorldVector"></a><strong>PhysObj:localToWorldVector</strong>&nbsp;(vec)</dt>
+<dd>
+
+Returns a normal vector in the reference frame of the world from the local frame of the physicsobject
+
+
+
+
+<h3>Parameters:</h3>
+<ul>
+	
 	<li>
-	  <code><em>v2</em></code>: Second Vector to define AABox
+	  <code><em>vec</em></code>: The normal vector to transform
 	</li>
 	
 </ul>
@@ -1638,7 +1120,272 @@ Returns whenever the given vector is in a box created by the 2 other vectors.
 
 
 <h3>Return value:</h3>
-<ul>bool True/False.</ul>
+<ul>The transformed vector</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:setInertia"></a><strong>PhysObj:setInertia</strong>&nbsp;(inertia)</dt>
+<dd>
+
+Sets the inertia of a physics object
+
+
+
+
+<h3>Parameters:</h3>
+<ul>
+	
+	<li>
+	  <code><em>inertia</em></code>: The inertia vector to set it to
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:setMass"></a><strong>PhysObj:setMass</strong>&nbsp;(mass)</dt>
+<dd>
+
+Sets the mass of a physics object
+
+
+
+
+<h3>Parameters:</h3>
+<ul>
+	
+	<li>
+	  <code><em>mass</em></code>: The mass to set it to
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:setMaterial"></a><strong>PhysObj:setMaterial</strong>&nbsp;(material)</dt>
+<dd>
+
+Sets the physical material of a physics object
+
+
+
+
+<h3>Parameters:</h3>
+<ul>
+	
+	<li>
+	  <code><em>material</em></code>: The physical material to set it to
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:setPos"></a><strong>PhysObj:setPos</strong>&nbsp;(pos)</dt>
+<dd>
+
+Sets the position of the physics object
+
+
+
+
+<h3>Parameters:</h3>
+<ul>
+	
+	<li>
+	  <code><em>pos</em></code>: The position vector to set it to
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:setVelocity"></a><strong>PhysObj:setVelocity</strong>&nbsp;(vel)</dt>
+<dd>
+
+Sets the velocity of the physics object
+
+
+
+
+<h3>Parameters:</h3>
+<ul>
+	
+	<li>
+	  <code><em>vel</em></code>: The velocity vector to set it to
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:worldToLocal"></a><strong>PhysObj:worldToLocal</strong>&nbsp;(vec)</dt>
+<dd>
+
+Returns a vector in the reference frame of the world from the local frame of the physicsobject
+
+
+
+
+<h3>Parameters:</h3>
+<ul>
+	
+	<li>
+	  <code><em>vec</em></code>: The vector to transform
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>The transformed vector</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:worldToLocal"></a><strong>PhysObj:worldToLocal</strong>&nbsp;(vec)</dt>
+<dd>
+
+Returns a vector in the reference frame of the world from the local frame of the physicsobject
+
+
+
+
+<h3>Parameters:</h3>
+<ul>
+	
+	<li>
+	  <code><em>vec</em></code>: The vector to transform
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>The transformed vector</ul>
+
+
+
+
+
+</dd>
+
+
+
+
+
+<dt><span class="realm_sh">&nbsp;</span><a name="PhysObj:worldToLocalVector"></a><strong>PhysObj:worldToLocalVector</strong>&nbsp;(vec)</dt>
+<dd>
+
+Returns a normal vector in the local reference frame of the physicsobject from the world frame
+
+
+
+
+<h3>Parameters:</h3>
+<ul>
+	
+	<li>
+	  <code><em>vec</em></code>: The normal vector to transform
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+<ul>The transformed vector</ul>
 
 
 
