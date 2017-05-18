@@ -460,20 +460,34 @@ function Editor:CreateTab(chosenfile)
 
 		if keycode == MOUSE_MIDDLE then
 			--self:FixTabFadeTime()
-			self:CloseTab(pnl)
+			if editor:getCode() != editor.savedCode then
+				Derma_Query("Are you sure you want to close unsaved tab?","Closing unsaved tab","Close",function() self:CloseTab(pnl) end,"Cancel",function() end)
+			else
+				self:CloseTab(pnl)
+			end
 			return
 		elseif keycode == MOUSE_RIGHT then
 			local menu = DermaMenu()
 			menu:AddOption("Close", function()
 					--self:FixTabFadeTime()
-					self:CloseTab(pnl)
+					if editor:getCode() != editor.savedCode then
+						Derma_Query("Are you sure you want to close unsaved tab?","Closing unsaved tab","Close",function() self:CloseTab(pnl) end,"Cancel",function() end)
+					else
+						self:CloseTab(pnl)
+					end
 				end)
 			menu:AddOption("Close all others", function()
 					self:FixTabFadeTime()
 					self:SetActiveTab(pnl)
 					for i = self:GetNumTabs(), 1, -1 do
-						if self.C.TabHolder.Items[i] ~= sheet then
-							self:CloseTab(i)
+						local item = self.C.TabHolder.Items[i]
+						if item != sheet then
+							if item.Tab.editor:getCode() != item.Tab.editor.savedCode then
+								local tab = item.Tab
+								Derma_Query("Are you sure you want to close unsaved tab?","Closing unsaved tab","Close",function() self:CloseTab(tab) end,"Cancel",function() end)
+							else
+								self:CloseTab(i)
+							end
 						end
 					end
 				end)
@@ -799,7 +813,12 @@ function Editor:InitComponents()
 
 	self.C.CloseTab:SetImage("icon16/page_white_delete.png")
 	self.C.CloseTab.DoClick = function(button) 
-		Derma_Query("Do you want to close current tab?","Are you sure?","Close",function() self:CloseTab() end,"Cancel",function() end)
+		local ed = self:GetActiveTab().editor
+		if ed:getCode() != ed.savedCode then
+			Derma_Query("Are you sure you want to close unsaved tab?","Closing unsaved tab","Close",function() self:CloseTab() end,"Cancel",function() end)
+		else
+			self:CloseTab()
+		end
 	end
 	self.C.CloseTab:SetToolTip( "Close tab" )
 
@@ -1574,7 +1593,7 @@ function Editor:Setup(nTitle, nLocation, nEditorType)
 	SFHelp:SetText("SFHelper")
 	SFHelp.DoClick = function()
 		if SF.Helper.Frame and SF.Helper.Frame:IsVisible() then
-			SF.Helper.Frame:close()
+			SF.Helper.Frame:Close()
 		else
 			SF.Helper.show()
 		end
@@ -1602,9 +1621,9 @@ function Editor:Setup(nTitle, nLocation, nEditorType)
 	ModelViewer:SetText("Model Viewer")
 	ModelViewer.DoClick = function()
 		if SF.Editor.modelViewer:IsVisible() then
-			SF.Editor.modelViewer:close()
+			SF.Editor.modelViewer:Close()
 		else
-			SF.Editor.modelViewer:open()
+			SF.Editor.modelViewer:Open()
 		end
 	end
 	self.C.ModelViewer = ModelViewer
