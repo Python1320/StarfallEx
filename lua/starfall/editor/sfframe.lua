@@ -1036,15 +1036,17 @@ function Editor:InitControlPanel()
 	perms:Refresh()
 	self.C.Control.Permissions = perms
 
-	------ Themes panel
-	sheet = self:AddControlPanelTab("Themes", "icon16/page_white_paintbrush.png", "Theme settings.")
-	local themesPanel = self:CreateThemesPanel()
-	themesPanel:SetParent(sheet.Panel)
-	sheet.Panel:DockPadding(0, 0, 0, 0)
-	themesPanel:DockMargin(4, 4, 4, 4)
-	themesPanel:Dock(FILL)
-	themesPanel:Refresh()
-	self.C.Control.Themes = themesPanel
+	if SF.Editor.CurrentTabHandler:GetString() == "wire" then
+		------ Themes panel
+		sheet = self:AddControlPanelTab("Themes", "icon16/page_white_paintbrush.png", "Theme settings.")
+		local themesPanel = self:CreateThemesPanel()
+		themesPanel:SetParent(sheet.Panel)
+		sheet.Panel:DockPadding(0, 0, 0, 0)
+		themesPanel:DockMargin(4, 4, 4, 4)
+		themesPanel:Dock(FILL)
+		themesPanel:Refresh()
+		self.C.Control.Themes = themesPanel
+	end
 end
 
 function Editor:CreateThemesPanel()

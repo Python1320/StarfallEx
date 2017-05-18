@@ -663,7 +663,7 @@ end
 
 function helper.show()
 	if not helper.Frame then helper.create() end
-	helper.Frame:open()
+	helper.Frame:Open()
 end
 
 local lastw, lasth = 0, 0
